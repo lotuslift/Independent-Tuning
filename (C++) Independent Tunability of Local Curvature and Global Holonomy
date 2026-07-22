@@ -1,0 +1,59 @@
+# Independent Tunability of Local Curvature and Global Holonomy in a Source-Free $SO(2)$ Gauge Field
+
+**Anthony Vito Coppa**  
+**July 2026**
+
+## Abstract
+A gauge connection's field strength and its holonomy are not the same fact told twice. We exhibit an explicit $SO(2)$ connection on $\mathbb{R}_{t}\times S_{\theta}^{1}\times\mathbb{R}_{x}\times\mathbb{R}_{y}$ with a genuine Lorentzian metric, and prove two independence results by direct computation, not analogy. First: the Maxwell curvature is fixed entirely by a free function $f$ of retarded time, while the holonomy around the compact fiber is fixed entirely by an unrelated real parameter $a$ - one is a local differential fact, the other a global integral fact, and the construction sets them to arbitrary independent values simultaneously. Second: on the same background, two worldlines with the same endpoints in coordinate time carry different proper times while carrying independently specifiable holonomy curvature-free local geometry and global phase transport are not the same measurement wearing two names. There is no interpretation attached to either result beyond what the equations say.
+
+## 1 Setup
+Let $V=\mathbb{R}^{2}$ carry the standard Euclidean inner product, and let 
+
+$$C_{1}=\begin{pmatrix}0&-1\\ 1&0\end{pmatrix}\in\mathfrak{so}(2)$$
+
+generate finite rotations $U(\theta)=e^{\theta C_{1}}=I\cos\theta+C_{1}\sin\theta$.
+
+Let $M=\mathbb{R}_{t}\times S_{\theta}^{1}\times\mathbb{R}_{x}\times\mathbb{R}_{y}$. Let $\eta$ be the closed 1-form on $S^{1}$ with $\oint_{S^{1}}\eta=2\pi$. For constants $c,\rho>0$ equip $M$ with the Lorentzian metric 
+
+$$g=-c^{2}dt^{2}+\rho^{2}\eta^{2}+dx^{2}+dy^{2}$$
+
+Let $E=M\times V$ be an oriented rank-2 real vector bundle with structure group $SO(2)$. For $f\in C^{2}(\mathbb{R})$ with $f^{\prime}\not\equiv0$ and retarded coordinate $u=t-x/c$, define the one-parameter connection family 
+
+$$\mathcal{A}_{a}=a\eta+f(u)dy, \quad a\in\mathbb{R}$$
+
+## 2 Curvature and Holonomy are Independent
+
+**Proposition 2.1 (Curvature).** The field strength of $\mathcal{A}_{a}$ is 
+
+$$F=d\mathcal{A}_{a}=f^{\prime}(u)du\wedge dy$$
+
+with components $F_{ty}=f^{\prime}(u)$, $F_{xy}=-\frac{1}{c}f^{\prime}(u)$. It satisfies the source-free Maxwell equations exactly: 
+
+$$\nabla_{\mu}F^{\mu y}=\partial_{t}F^{ty}+\partial_{x}F^{xy}=-\frac{1}{c^{2}}f^{\prime\prime}(u)+\frac{1}{c^{2}}f^{\prime\prime}(u)=0, \quad dF=0, \quad d*_{g}F=0$$
+
+$F$ depends on $\mathcal{A}_{a}$ only through $f$; it does not depend on $a$.
+
+**Proposition 2.2 (Holonomy).** For a spatial loop $l$ winding once around $S_{\theta}^{1}$ at fixed $t, x, y$, 
+
+$$Hol_{\mathcal{A}_{a}}(l)=\exp\left(-C_{1}\oint_{l}\mathcal{A}_{a}\right)=e^{-2\pi aC_{1}}$$
+
+$$\Delta_{phase} := Hol_{\mathcal{A}_{a}}(l)-I=e^{-2\pi aC_{1}}-I$$
+
+This depends on $\mathcal{A}_{a}$ only through $a$; it does not depend on $f$.
+
+**Theorem 2.3 (Independent Tunability).** $F$ and $\Delta_{phase}$ are functions of disjoint, freely chosen data: any $f\in C^{2}(\mathbb{R})$ with $f^{\prime}\not\equiv0$ may be paired with any $a\in\mathbb{R}$, giving an arbitrary curvature profile and an arbitrary holonomy value on the same source-free connection, simultaneously and without constraint on one another.
+
+## 3 Proper Time and Gauge Phase are Independent
+For endpoints $p=(0,[0],0,0)$ and $q=(T,[0],0,0)$ with $T>\frac{2\pi\rho}{c}$ define timelike paths 
+
+$$\gamma_{0}(t)=(t,[0],0,0)$$
+
+$$\gamma_{1}(t)=\left(t,\left[\frac{2\pi t}{T}\right],0,0\right)$$
+
+**Proposition 3.1 (Proper Time).** 
+
+$$\tau[\gamma_{0}]=T, \quad \tau[\gamma_{1}]=T\sqrt{1-\left(\frac{2\pi\rho}{cT}\right)^{2}}$$
+
+$$\Delta_{time} := \tau[\gamma_{0}]-\tau[\gamma_{1}]\ne0$$
+
+**Theorem 3.2 (Coexistence).** $\Delta_{time}\in\mathbb{R}$ and $\Delta_{phase}\in End(E_{p})$ coexist on the same pair of shared-endpoint worldlines without functional dependence: $\Delta_{time}$ is fixed by $p$ and $T$ alone, and $\Delta_{phase}$ by $a$ alone, via the same connection family of Section 2.
